@@ -1,7 +1,10 @@
 {% extends 'boards/base.html' %}
 {% block body %}
     <h1>NEW</h1>
-    <form action="{% url 'boards:create' %}" method="POST">
+    <!--방법1-->
+    <!--<form action="{% url 'boards:new' %}" method="POST">-->
+    <!--방법2-->
+    <form method="POST">
         {% csrf_token %}
         <label for="title">TITLE</label>
         <input type='text' name='title' id='title'/><br>
